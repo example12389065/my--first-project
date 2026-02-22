@@ -1,0 +1,82 @@
+<html>
+
+<head>
+<title>My Search Engine</title>
+
+<style>
+
+body{
+text-align:center;
+font-family:Arial;
+margin-top:150px;
+}
+
+input{
+width:300px;
+padding:10px;
+font-size:18px;
+}
+
+button{
+padding:10px;
+font-size:18px;
+margin-left:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>🔎 My Smart Search</h1>
+
+<input
+type="text"
+id="search"
+placeholder="Try: yt cats , gh github , ai future">
+
+<button onclick="go()">
+Search
+</button>
+
+<script>
+
+function go(){
+
+let text =
+document.getElementById("search").value;
+
+text = text.toLowerCase();
+
+if(text.startsWith("yt ")){
+
+window.location =
+"https://www.youtube.com/results?search_query="
++ text.substring(3);
+
+}
+
+else if(text.startsWith("gh ")){
+
+window.location =
+"https://github.com/search?q="
++ text.substring(3);
+
+}
+
+else{
+
+window.location =
+"https://www.google.com/search?q="
++ text;
+
+}
+
+}
+
+</script>
+
+</body>
+
+</html>

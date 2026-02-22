@@ -1,0 +1,5 @@
+# My First Project
+
+I am learning GitHub.
+
+Day 1 — Started building consistency.

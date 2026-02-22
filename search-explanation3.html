@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Search Engine Full Explanation</title>
+
+<style>
+
+body{
+
+font-family:Arial;
+
+margin:40px;
+
+background:#f3f3f3;
+
+line-height:1.7;
+
+}
+
+.section{
+
+background:white;
+
+padding:20px;
+
+margin-bottom:20px;
+
+border-radius:10px;
+
+}
+
+code{
+
+background:#eee;
+
+padding:15px;
+
+display:block;
+
+white-space:pre-wrap;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>How I Built My Mini Search Engine</h1>
+
+
+<div class="section">
+
+<h2>1. HTML Structure</h2>
+
+<code>
+
+<!DOCTYPE html>
+
+</code>
+
+<p>
+
+This tells the browser that this is a modern HTML5 website.
+
+Without this, some browsers behave differently.
+
+</p>
+
+</div>
+
+
+
+<div class="section">
+
+<h2>2. Starting HTML Page</h2>
+
+<code>
+
+<html>
+
+</code>
+
+<p>
+
+Everything inside the website stays between html tags.
+
+It is the container of the whole webpage.
+
+</p>
+
+</div>
+
+
+
+<div class="section">
+
+<h2>3. Head Section</h2>
+
+<code>
+
+<head>
+
+<title>Search Engine</title>
+
+</head>
+
+</code>
+
+<p>
+
+Head contains information about the page.
+
+Title appears in the browser tab.
+
+</p>
+
+</div>
+
+
+
+<div class="section">
+
+<h2>4. Body Section</h2>
+
+<code>
+
+<body>
+
+</code>
+
+<p>
+
+Everything visible to users is placed inside body.
+
+Text, buttons and search box appear here.
+
+</p>
+
+</div>
+
+
+
+<div class="section">
+
+<h2>5. Search Input Box</h2>
+
+<code>
+
+<input id="search">
+
+</code>
+
+<p>
+
+This creates a box where users type text.
+
+The id name "search" allows JavaScript to find it.
+
+</p>
+
+</div>
+
+
+
+<div class="section">
+
+<h2>6. Button Action</h2>
+
+<code>
+
+<button onclick="searchSite()">
+
+</code>
+
+<p>
+
+When user clicks button,
+
+the function searchSite runs.
+
+onclick connects HTML with JavaScript.
+
+</p>
+
+</div>
+
+
+
+<div class="section">
+
+<h2>7. JavaScript Function</h2>
+
+<code>
+
+function searchSite(){
+
+}
+
+</code>
+
+<p>
+
+Function means a block of instructions.
+
+Browser runs it when called.
+
+</p>
+
+</div>
+
+
+
+<div class="section">
+
+<h2>8. Reading User Input</h2>
+
+<code>
+
+let text =
+document.getElementById("search").value;
+
+</code>
+
+<p>
+
+document means entire webpage.
+
+getElementById finds the search box.
+
+value reads what the user typed.
+
+</p>
+
+</div>
+
+
+
+<div class="section">
+
+<h2>9. Decision Logic</h2>
+
+<code>
+
+if(text === "youtube"){
+
+window.location="https://youtube.com";
+
+}
+
+</code>
+
+<p>
+
+If checks condition.
+
+=== means exact match.
+
+window.location changes browser page.
+
+</p>
+
+</div>
+
+
+
+<div class="section">
+
+<h2>10. Unknown Search</h2>
+
+<code>
+
+else{
+
+alert("Not Found");
+
+}
+
+</code>
+
+<p>
+
+If word is unknown,
+
+browser shows popup message.
+
+</p>
+
+</div>
+
+
+
+<div class="section">
+
+<h2>11. Closing Body</h2>
+
+<code>
+
+</body>
+
+</code>
+
+<p>
+
+Ends visible webpage content.
+
+</p>
+
+</div>
+
+
+
+<div class="section">
+
+<h2>12. Closing HTML</h2>
+
+<code>
+
+</html>
+
+</code>
+
+<p>
+
+Ends entire webpage.
+
+</p>
+
+</div>
+
+
+
+<a href="index.html">
+
+<button>Back Home</button>
+
+</a>
+
+</body>
+
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>How I Built My Search Engine</title>
+
+<style>
+
+body{
+
+font-family:Arial;
+
+margin:40px;
+
+background:#f4f4f4;
+
+line-height:1.7;
+
+}
+
+.section{
+
+background:white;
+
+padding:20px;
+
+margin-bottom:25px;
+
+border-radius:10px;
+
+}
+
+code{
+
+background:black;
+
+color:lime;
+
+padding:15px;
+
+display:block;
+
+white-space:pre-wrap;
+
+border-radius:8px;
+
+}
+
+button{
+
+padding:10px;
+
+margin-top:15px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>How I Built My Mini Search Engine</h1>
+
+
+
+<div class="section">
+
+<h2>1. Idea</h2>
+
+<p>
+
+I wanted users to type a word and go directly to a website.
+
+Example:
+
+youtube → opens YouTube.
+
+github → opens GitHub.
+
+</p>
+
+</div>
+
+
+
+<div class="section">
+
+<h2>2. Full Search Engine Code</h2>
+
+<code>
+
+&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+
+&lt;head&gt;
+
+&lt;title&gt;Search Page&lt;/title&gt;
+
+
+
+&lt;script&gt;
+
+function searchSite(){
+
+
+
+let text =
+
+document.getElementById("search").value.toLowerCase();
+
+
+
+if(text === "youtube"){
+
+window.location="https://youtube.com";
+
+}
+
+
+
+else if(text === "github"){
+
+window.location="https://github.com";
+
+}
+
+
+
+else{
+
+alert("Not Found");
+
+}
+
+
+
+}
+
+&lt;/script&gt;
+
+&lt;/head&gt;
+
+
+
+&lt;body&gt;
+
+
+
+&lt;h1&gt;Mini Search Engine&lt;/h1&gt;
+
+
+
+&lt;input id="search"
+
+placeholder="type youtube or github"&gt;
+
+
+
+&lt;button onclick="searchSite()"&gt;
+
+Search
+
+&lt;/button&gt;
+
+
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+
+</code>
+
+</div>
+
+
+
+<div class="section">
+
+<h2>3. Line By Line Explanation</h2>
+
+<p>
+
+&lt;!DOCTYPE html&gt; → tells browser modern HTML.
+
+</p>
+
+<p>
+
+&lt;html&gt; → container of entire webpage.
+
+</p>
+
+<p>
+
+&lt;head&gt; → information about website.
+
+</p>
+
+<p>
+
+&lt;script&gt; → JavaScript logic starts.
+
+</p>
+
+<p>
+
+function searchSite() → instructions that run when button clicked.
+
+</p>
+
+<p>
+
+document.getElementById → finds search box.
+
+</p>
+
+<p>
+
+.value → reads user typed word.
+
+</p>
+
+<p>
+
+.toLowerCase() → converts text to small letters.
+
+</p>
+
+<p>
+
+if statement → checks condition.
+
+</p>
+
+<p>
+
+window.location → moves browser to another website.
+
+</p>
+
+<p>
+
+alert → popup message if not found.
+
+</p>
+
+</div>
+
+
+
+<div class="section">
+
+<h2>4. What I Learned</h2>
+
+<ul>
+
+<li>HTML builds structure.</li>
+
+<li>JavaScript controls behaviour.</li>
+
+<li>Decision logic changes navigation.</li>
+
+<li>Websites respond to user input.</li>
+
+</ul>
+
+</div>
+
+
+
+<a href="index.html">
+
+<button>Back Home</button>
+
+</a>
+
+
+
+</body>
+
+</html>

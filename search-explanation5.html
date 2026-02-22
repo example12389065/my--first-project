@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>How I Built My Smart Search Engine</title>
+
+<style>
+
+body{
+
+font-family:Arial;
+
+margin:40px;
+
+background:#f5f5f5;
+
+line-height:1.7;
+
+}
+
+.section{
+
+background:white;
+
+padding:20px;
+
+margin-bottom:25px;
+
+border-radius:10px;
+
+}
+
+code{
+
+background:black;
+
+color:#00ff00;
+
+padding:15px;
+
+display:block;
+
+white-space:pre-wrap;
+
+border-radius:10px;
+
+overflow:auto;
+
+}
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+
+<h1>How I Built My Smart Search Engine</h1>
+
+
+
+<div class="section">
+
+<h2>1. Full Code</h2>
+
+<code>
+
+&lt;html&gt;
+
+&lt;head&gt;
+
+&lt;title&gt;My Search Engine&lt;/title&gt;
+
+
+
+&lt;style&gt;
+
+body{
+
+text-align:center;
+
+font-family:Arial;
+
+margin-top:150px;
+
+}
+
+
+
+input{
+
+width:300px;
+
+padding:10px;
+
+font-size:18px;
+
+}
+
+
+
+button{
+
+padding:10px;
+
+font-size:18px;
+
+margin-left:10px;
+
+}
+
+&lt;/style&gt;
+
+&lt;/head&gt;
+
+
+
+&lt;body&gt;
+
+
+
+&lt;h1&gt;🔎 My Smart Search&lt;/h1&gt;
+
+
+
+&lt;input
+
+type="text"
+
+id="search"
+
+placeholder="Try: yt cats , gh github , ai future"&gt;
+
+
+
+&lt;button onclick="go()"&gt;
+
+Search
+
+&lt;/button&gt;
+
+
+
+&lt;script&gt;
+
+function go(){
+
+
+
+let text =
+
+document.getElementById("search").value;
+
+
+
+text = text.toLowerCase();
+
+
+
+if(text.startsWith("yt ")){
+
+window.location =
+
+"https://www.youtube.com/results?search_query="
+
++ text.substring(3);
+
+}
+
+
+
+else if(text.startsWith("gh ")){
+
+window.location =
+
+"https://github.com/search?q="
+
++ text.substring(3);
+
+}
+
+
+
+else{
+
+window.location =
+
+"https://www.google.com/search?q="
+
++ text;
+
+}
+
+
+
+}
+
+&lt;/script&gt;
+
+
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+
+</code>
+
+</div>
+
+
+
+<div class="section">
+
+<h2>2. Line By Line Explanation</h2>
+
+
+
+<p>
+
+&lt;html&gt; → Starts the webpage container.
+
+</p>
+
+
+
+<p>
+
+&lt;head&gt; → Contains information and styling.
+
+</p>
+
+
+
+<p>
+
+&lt;title&gt; → Name shown on browser tab.
+
+</p>
+
+
+
+<p>
+
+&lt;style&gt; → CSS styling begins.
+
+</p>
+
+
+
+<p>
+
+text-align:center → moves everything to center.
+
+</p>
+
+
+
+<p>
+
+margin-top:150px → pushes content downward.
+
+</p>
+
+
+
+<p>
+
+input width and padding → makes search box bigger.
+
+</p>
+
+
+
+<p>
+
+button styling → controls button size and spacing.
+
+</p>
+
+
+
+<p>
+
+&lt;body&gt; → visible webpage starts.
+
+</p>
+
+
+
+<p>
+
+&lt;h1&gt; → main heading text.
+
+</p>
+
+
+
+<p>
+
+&lt;input id="search"&gt; → search box.
+
+id allows JavaScript to find it.
+
+</p>
+
+
+
+<p>
+
+placeholder → shows example text.
+
+</p>
+
+
+
+<p>
+
+onclick="go()" → runs JavaScript function when clicked.
+
+</p>
+
+
+
+<p>
+
+function go() → instructions executed after click.
+
+</p>
+
+
+
+<p>
+
+document.getElementById → finds search box.
+
+</p>
+
+
+
+<p>
+
+.value → reads typed text.
+
+</p>
+
+
+
+<p>
+
+toLowerCase() → converts text to small letters.
+
+Example:
+
+YT Cats becomes yt cats.
+
+</p>
+
+
+
+<p>
+
+startsWith("yt ") → checks if user typed yt.
+
+</p>
+
+
+
+<p>
+
+substring(3) → removes "yt " part.
+
+Example:
+
+yt cats → cats.
+
+</p>
+
+
+
+<p>
+
+window.location → browser opens another website.
+
+</p>
+
+
+
+<p>
+
+else → default search.
+
+If no shortcut used,
+
+Google search opens.
+
+</p>
+
+
+
+</div>
+
+
+
+<div class="section">
+
+<h2>3. What I Learned</h2>
+
+<ul>
+
+<li>HTML builds structure.</li>
+
+<li>CSS changes appearance.</li>
+
+<li>JavaScript controls behaviour.</li>
+
+<li>User input changes website actions.</li>
+
+</ul>
+
+</div>
+
+
+
+<a href="index.html">
+
+<button>Back Home</button>
+
+</a>
+
+
+
+</body>
+
+</html>

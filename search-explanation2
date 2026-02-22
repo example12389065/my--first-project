@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>How I Built My Search Engine</title>
+
+<style>
+
+body{
+font-family:Arial;
+margin:40px;
+background:#f5f5f5;
+line-height:1.6;
+}
+
+.section{
+background:white;
+padding:20px;
+margin-bottom:20px;
+border-radius:10px;
+}
+
+code{
+background:#eeeeee;
+display:block;
+padding:15px;
+white-space:pre-wrap;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>How I Built My Mini Search Engine</h1>
+
+<div class="section">
+
+<h2>1. The Idea</h2>
+
+<p>
+
+I wanted to understand how websites respond when users type something.
+
+Search engines like Google take input and decide what to open.
+
+So I built a simple version.
+
+</p>
+
+</div>
+
+
+
+<div class="section">
+
+<h2>2. The Problem</h2>
+
+<p>
+
+Users type different words.
+
+The website must read the word and decide what to do.
+
+Example:
+
+youtube → open YouTube.
+
+github → open GitHub.
+
+</p>
+
+</div>
+
+
+
+<div class="section">
+
+<h2>3. How Input Is Read</h2>
+
+<code>
+
+let text =
+document.getElementById("search").value;
+
+</code>
+
+<p>
+
+document = entire webpage.
+
+getElementById("search") finds the search box.
+
+.value reads what the user typed.
+
+</p>
+
+</div>
+
+
+
+<div class="section">
+
+<h2>4. Decision Making Logic</h2>
+
+<code>
+
+if(text === "youtube"){
+
+window.location =
+"https://youtube.com";
+
+}
+
+</code>
+
+<p>
+
+The IF statement checks the word.
+
+If it matches youtube,
+
+the browser moves to that website.
+
+window.location changes pages.
+
+</p>
+
+</div>
+
+
+
+<div class="section">
+
+<h2>5. Why JavaScript Was Needed</h2>
+
+<p>
+
+HTML builds structure.
+
+But HTML cannot make decisions.
+
+JavaScript adds behaviour and logic.
+
+It allows interaction.
+
+</p>
+
+</div>
+
+
+
+<div class="section">
+
+<h2>6. What Happens When User Clicks Search</h2>
+
+<code>
+
+<button onclick="searchSite()">
+
+</code>
+
+<p>
+
+When button is clicked,
+
+JavaScript function runs.
+
+It reads input and decides destination.
+
+</p>
+
+</div>
+
+
+
+<div class="section">
+
+<h2>7. What I Learned</h2>
+
+<ul>
+
+<li>HTML creates pages.</li>
+
+<li>JavaScript controls behaviour.</li>
+
+<li>Websites connect using links.</li>
+
+<li>Decision logic controls navigation.</li>
+
+</ul>
+
+</div>
+
+
+
+<div class="section">
+
+<h2>8. Future Improvements</h2>
+
+<ul>
+
+<li>Add more websites.</li>
+
+<li>Allow partial search matching.</li>
+
+<li>Add styling and animations.</li>
+
+</ul>
+
+</div>
+
+
+
+<a href="index.html">
+
+<button>Back Home</button>
+
+</a>
+
+</body>
+
+</html>

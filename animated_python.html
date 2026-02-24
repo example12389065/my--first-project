@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python for Beginners - Lesson 1</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@500;600&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    .title { font-family: 'Space Grotesk', sans-serif; }
+    .code { font-family: ui-monospace, monospace; }
+    .animate-pop { animation: pop 0.6s ease forwards; }
+    .animate-type { overflow: hidden; white-space: nowrap; border-right: 3px solid #22c55e; }
+    @keyframes pop { 0% { transform: scale(0.3) rotate(-15deg); opacity: 0; } 100% { transform: scale(1) rotate(0); opacity: 1; } }
+    @keyframes wiggle { 0%,100% { transform: rotate(-8deg); } 50% { transform: rotate(8deg); } }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 via-white to-emerald-50 min-h-screen flex items-center justify-center p-6">
+  <div class="max-w-6xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden border border-emerald-100">
+    <!-- Header -->
+    <div class="bg-gradient-to-r from-blue-600 to-emerald-600 text-white p-8 text-center">
+      <div class="flex items-center justify-center gap-4">
+        <span class="text-6xl">🐍</span>
+        <div>
+          <h1 class="title text-5xl font-bold tracking-tighter">Python for Beginners</h1>
+          <p class="text-2xl mt-1 opacity-90">Lesson 1 – Your First Program</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="p-10 grid grid-cols-12 gap-10">
+      <!-- Left: Why Python -->
+      <div class="col-span-3 space-y-6">
+        <div id="bullet1" class="opacity-0 translate-x-8 transition-all duration-700 flex items-start gap-3">
+          <i class="fa-solid fa-check text-emerald-500 text-2xl mt-1"></i>
+          <div><p class="font-semibold text-lg">Easy-to-read syntax</p><p class="text-gray-600 text-sm">(like English!)</p></div>
+        </div>
+        <div id="bullet2" class="opacity-0 translate-x-8 transition-all duration-700 flex items-start gap-3">
+          <i class="fa-solid fa-check text-emerald-500 text-2xl mt-1"></i>
+          <div><p class="font-semibold text-lg">Completely free & open source</p></div>
+        </div>
+        <div id="bullet3" class="opacity-0 translate-x-8 transition-all duration-700 flex items-start gap-3">
+          <i class="fa-solid fa-check text-emerald-500 text-2xl mt-1"></i>
+          <div><p class="font-semibold text-lg">Used by Google, Netflix, NASA & more</p></div>
+        </div>
+        <div id="bullet4" class="opacity-0 translate-x-8 transition-all duration-700 flex items-start gap-3">
+          <i class="fa-solid fa-check text-emerald-500 text-2xl mt-1"></i>
+          <div><p class="font-semibold text-lg">Perfect starting point</p></div>
+        </div>
+      </div>
+
+      <!-- Center: Code -->
+      <div class="col-span-6 text-center">
+        <div class="relative mx-auto max-w-md bg-zinc-900 rounded-2xl p-6 shadow-inner border border-zinc-700">
+          <div class="flex gap-1.5 mb-4">
+            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+            <div class="w-3 h-3 rounded-full bg-emerald-500"></div>
+          </div>
+          <pre id="code" class="code text-left text-emerald-400 text-lg font-medium leading-relaxed h-20">print("Hello, World! 🌍")</pre>
+        </div>
+
+        <button onclick="runCode()" id="runBtn"
+          class="mt-6 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-8 py-3 rounded-2xl shadow-lg transition-all active:scale-95 flex items-center gap-3 mx-auto">
+          <i class="fa-solid fa-play"></i>
+          Run Code
+        </button>
+
+        <div id="output" class="mt-6 opacity-0 transition-all duration-700 text-3xl font-bold text-emerald-600 min-h-[60px]">
+          Hello, World! 🌍
+        </div>
+      </div>
+
+      <!-- Right: Steps -->
+      <div class="col-span-3 space-y-6">
+        <div id="step1" class="opacity-0 translate-x-8 transition-all duration-700 bg-white border border-emerald-200 rounded-2xl p-4 shadow-sm">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center font-bold">1</div>
+            <div class="text-sm font-medium">Go to python.org → Download</div>
+          </div>
+        </div>
+        <div id="step2" class="opacity-0 translate-x-8 transition-all duration-700 bg-white border border-emerald-200 rounded-2xl p-4 shadow-sm">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center font-bold">2</div>
+            <div class="text-sm font-medium">Open any editor (VS Code, IDLE, or Replit.com)</div>
+          </div>
+        </div>
+        <div id="step3" class="opacity-0 translate-x-8 transition-all duration-700 bg-white border border-emerald-200 rounded-2xl p-4 shadow-sm">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center font-bold">3</div>
+            <div class="text-sm font-medium">Type the code</div>
+          </div>
+        </div>
+        <div id="step4" class="opacity-0 translate-x-8 transition-all duration-700 bg-white border border-emerald-200 rounded-2xl p-4 shadow-sm">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center font-bold">4</div>
+            <div class="text-sm font-medium">Run it and celebrate! 🎉</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="bg-zinc-50 border-t p-6 text-center">
+      <div class="inline-flex items-center gap-3 text-emerald-700 font-medium text-lg">
+        <span class="text-3xl animate-[wiggle_1.5s_infinite]">🐍</span>
+        Copy the code & try it now! Your first program in under 2 minutes.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Tailwind script already loaded
+    function initTailwind() { }
+
+    // Typing effect
+    function typeCode() {
+      const codeEl = document.getElementById('code');
+      const text = 'print("Hello, World! 🌍")';
+      let i = 0;
+      codeEl.innerHTML = '';
+      const interval = setInterval(() => {
+        if (i < text.length) {
+          codeEl.innerHTML += text[i] === ' ' ? '&nbsp;' : text[i];
+          i++;
+        } else {
+          clearInterval(interval);
+          codeEl.style.borderRight = 'none';
+        }
+      }, 60);
+    }
+
+    // Sequential animations
+    function startAnimations() {
+      setTimeout(() => document.getElementById('bullet1').classList.add('opacity-100', 'translate-x-0'), 600);
+      setTimeout(() => document.getElementById('bullet2').classList.add('opacity-100', 'translate-x-0'), 1100);
+      setTimeout(() => document.getElementById('bullet3').classList.add('opacity-100', 'translate-x-0'), 1600);
+      setTimeout(() => document.getElementById('bullet4').classList.add('opacity-100', 'translate-x-0'), 2100);
+
+      setTimeout(() => document.getElementById('step1').classList.add('opacity-100', 'translate-x-0'), 2800);
+      setTimeout(() => document.getElementById('step2').classList.add('opacity-100', 'translate-x-0'), 3400);
+      setTimeout(() => document.getElementById('step3').classList.add('opacity-100', 'translate-x-0'), 4000);
+      setTimeout(() => document.getElementById('step4').classList.add('opacity-100', 'translate-x-0'), 4600);
+
+      setTimeout(() => typeCode(), 800);
+    }
+
+    // Run button
+    function runCode() {
+      const output = document.getElementById('output');
+      const btn = document.getElementById('runBtn');
+      btn.innerHTML = `<i class="fa-solid fa-spinner animate-spin"></i> Running...`;
+      setTimeout(() => {
+        output.classList.remove('opacity-0');
+        output.classList.add('animate-pop');
+        btn.innerHTML = `✅ Done! Try it yourself →`;
+        btn.disabled = true;
+        createConfetti();
+      }, 800);
+    }
+
+    function createConfetti() {
+      for (let i = 0; i < 60; i++) {
+        const confetti = document.createElement('div');
+        confetti.textContent = ['🎉','🌍','🐍','🚀'][Math.floor(Math.random()*4)];
+        confetti.style.position = 'fixed';
+        confetti.style.left = Math.random() * 100 + 'vw';
+        confetti.style.top = '-50px';
+        confetti.style.fontSize = '24px';
+        confetti.style.zIndex = '9999';
+        confetti.style.transition = 'all 3s ease-out';
+        document.body.appendChild(confetti);
+        
+        setTimeout(() => {
+          confetti.style.transform = `translateY(\( {window.innerHeight + 100}px) rotate( \){Math.random()*720-360}deg)`;
+          confetti.style.opacity = '0';
+        }, 50);
+        
+        setTimeout(() => confetti.remove(), 3500);
+      }
+    }
+
+    // Start everything
+    window.onload = () => {
+      startAnimations();
+    };
+  </script>
+</body>
+</html>
